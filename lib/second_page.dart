@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:app_uts/api.dart';
 import 'package:app_uts/history_page.dart';
-import 'package:app_uts/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/container.dart';
 
 class second_page extends StatefulWidget {
   const second_page({super.key});
@@ -248,49 +246,59 @@ class _second_pageState extends State<second_page> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width / 2.25,
-                            height: 195,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(25),
-                                color: Colors.white),
-                            child: Padding(
-                              padding: const EdgeInsets.all(25.0),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => buildernya()));
+                            },
+                            child: Container(
+                              width: MediaQuery.of(context).size.width / 2.25,
+                              height: 195,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  color: Colors.white),
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(15),
-                                              color: Colors.green[50]),
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: Image.asset(
-                                              "image/icon swift globe.png",
-                                              height: 50,
-                                              width: 50,
+                                padding: const EdgeInsets.all(25.0),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                color: Colors.green[50]),
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(20.0),
+                                              child: Image.asset(
+                                                "image/icon swift globe.png",
+                                                height: 50,
+                                                width: 50,
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "swift globe",
-                                          style: TextStyle(
-                                              color: Colors.grey, fontSize: 18),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "swift globe",
+                                            style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 18),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
